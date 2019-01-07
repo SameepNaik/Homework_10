@@ -81,6 +81,8 @@ def tobs():
         date_tobs.append(temp_dict)
     return jsonify(date_tobs)
 
+# I was able to get everything to work, except for this last part.  I kept running into errors, and couldn't figure out what was wrong
+# in time.  I've commented out the code that I wrote so you can see what I did.
 
 #@app.route("/api/v1.0/<start>")
 #def start():
@@ -96,16 +98,6 @@ def tobs():
 #    results = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
 #    filter(Measurement.date >= start_date, Measurement.date <= end_date).all()
 #    print(results)
-
-
-
-
-
-
-
-
-
-
 
 if __name__=='__main__':
     app.run(debug=True)
